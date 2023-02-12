@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1248908995563988494}
   - component: {fileID: 2225818570796299694}
   - component: {fileID: 6002484191552656077}
+  - component: {fileID: 6925836890144302628}
   m_Layer: 0
   m_Name: RightShoulder
   m_TagString: Target
@@ -198,6 +199,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &6925836890144302628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550713370057168974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06677246, y: 0.054761052, z: 0.009087958}
+  m_Center: {x: -0.13156891, y: 0.48891884, z: -0.004543979}
 --- !u!1 &4199020345291051247
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +263,7 @@ GameObject:
   - component: {fileID: 8329717740424151741}
   - component: {fileID: 3330401774341863861}
   - component: {fileID: 4510944333952859956}
+  - component: {fileID: 1190974243476177052}
   m_Layer: 0
   m_Name: Head
   m_TagString: Target
@@ -351,6 +366,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &1190974243476177052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291226882097802689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06655121, y: 0.059180498, z: 0.009087958}
+  m_Center: {x: -0.004825592, y: 0.77770615, z: -0.004543979}
 --- !u!1 &4548226633037463333
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +392,7 @@ GameObject:
   - component: {fileID: 5102778052612900409}
   - component: {fileID: 5788503581905454438}
   - component: {fileID: 8165044641599778274}
+  - component: {fileID: 8610274013173639980}
   m_Layer: 0
   m_Name: LeftShoulder
   m_TagString: Target
@@ -466,6 +495,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &8610274013173639980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4548226633037463333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06599426, y: 0.061421156, z: 0.009087958}
+  m_Center: {x: 0.11506653, y: 0.49156916, z: -0.004543979}
 --- !u!1 &5093714724990049057
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +521,7 @@ GameObject:
   - component: {fileID: 7228891678312141263}
   - component: {fileID: 8804173390547111377}
   - component: {fileID: 1915614657103964760}
+  - component: {fileID: 1486853542347324093}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Target
@@ -581,6 +624,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &1486853542347324093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5093714724990049057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06756592, y: 0.054777503, z: 0.009087958}
+  m_Center: {x: -0.20272064, y: 0.3010059, z: -0.004543979}
 --- !u!1 &5694547929875724301
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +650,7 @@ GameObject:
   - component: {fileID: 330631763930625272}
   - component: {fileID: 3711628025202324701}
   - component: {fileID: 1916507255137309982}
+  - component: {fileID: 5694564589045298855}
   m_Layer: 0
   m_Name: Ribs
   m_TagString: Target
@@ -696,6 +753,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &5694564589045298855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694547929875724301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06324768, y: 0.06179583, z: 0.009087958}
+  m_Center: {x: 0.077056885, y: 0.26349503, z: -0.004543979}
 --- !u!1 &7481701986198600167
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +812,7 @@ GameObject:
   - component: {fileID: 2667919226096995726}
   - component: {fileID: 6927549559547357499}
   - component: {fileID: 2704525159700804465}
+  - component: {fileID: 6356301478032196936}
   m_Layer: 0
   m_Name: ArmWithAKnife
   m_TagString: Target
@@ -844,6 +915,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &6356301478032196936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308653452669593695}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07652283, y: 0.0780139, z: 0.009087958}
+  m_Center: {x: 0.3028183, y: 0.040205, z: -0.004543979}
 --- !u!1 &9036124740511765944
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +941,7 @@ GameObject:
   - component: {fileID: 8749305527389788252}
   - component: {fileID: 1378641954312919180}
   - component: {fileID: 7691948743443099470}
+  - component: {fileID: 7670703063994238190}
   m_Layer: 0
   m_Name: Stomach
   m_TagString: Target
@@ -959,3 +1044,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _startHp: 100
+--- !u!65 &7670703063994238190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9036124740511765944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07117462, y: 0.06672001, z: 0.009087958}
+  m_Center: {x: -0.011058807, y: 0.07008004, z: -0.004543979}
