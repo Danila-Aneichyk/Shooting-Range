@@ -41,7 +41,7 @@ public class MovingObject : MonoBehaviour
     {
         _tween?.Kill(true);
 
-        Sequence sequence = DOTween.Sequence();
+        Sequence sequence = DOTween.Sequence(); 
 
         for (int i = 1; i < _points.Count; i++)
         {
