@@ -1,5 +1,3 @@
-using System;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -20,7 +18,7 @@ public class Gun : MonoBehaviour
     //[SerializeField] private AudioClip _audioClip; 
     private void Awake()
     {
-        _camera = FindObjectOfType<Camera>(); 
+        _camera = FindObjectOfType<Camera>();
     }
 
     private void Update()
@@ -34,12 +32,15 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
+        int randomDamage = Random.Range(30,100); 
 
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
         {
             Debug.Log(hit.transform.name);
-            Target target = hit.transform.GetComponent<Target>();
-            if (hit.collider.CompareTag("Target"))
+            TargetHp targetHp = hit.transform.GetComponent<TargetHp>();
+            targetHp.CurrentHp -= randomDamage;
+            Debug.Log($"Current damage is: {randomDamage}");
+            if (hit.collider.CompareTag("Target") && targetHp.CurrentHp <= 0)
             {
                 hit.rigidbody.AddForce(transform.forward * _force);
                 hit.rigidbody.useGravity = true;

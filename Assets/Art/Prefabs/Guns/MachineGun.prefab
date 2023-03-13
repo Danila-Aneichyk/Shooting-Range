@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 0.02
-  maxAmonut: 0.06
+  maxAmount: 0.06
   smoothAmount: 6
   rotationAmount: 4
   maxRotationAmount: 5

@@ -821,9 +821,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016901207441782841}
-  - component: {fileID: 1925029011}
+  - component: {fileID: -2369277431400109171}
   m_Layer: 0
-  m_Name: 'ManWithABat '
+  m_Name: ManWithABat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,7 +846,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1925029011
+--- !u!114 &-2369277431400109171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -858,9 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ffd9cdb8ab3f143ad23eaea76be805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points:
-  - {fileID: 0}
-  - {fileID: 0}
+  _points: []
   _needPlayOnStart: 1
   _isLoop: 1
   _delayInPosition: 1

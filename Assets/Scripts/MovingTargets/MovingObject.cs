@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
+using Zenject;
 
 public class MovingObject : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class MovingObject : MonoBehaviour
 
     public List<Transform> Points => _points;
 
+    [Inject]
+    private void Construct(Points points)
+    {
+        _points = points._points;
+    }
+    
     private void Awake()
     {
         if (!IsValid())
