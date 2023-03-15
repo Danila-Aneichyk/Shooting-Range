@@ -32,19 +32,28 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        int randomDamage = Random.Range(30,100); 
-
+        int randomDamage = Random.Range(30,100);
+        
         if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range))
         {
-            Debug.Log(hit.transform.name);
-            TargetHp targetHp = hit.transform.GetComponent<TargetHp>();
-            targetHp.CurrentHp -= randomDamage;
-            Debug.Log($"Current damage is: {randomDamage}");
-            if (hit.collider.CompareTag("Target") && targetHp.CurrentHp <= 0)
-            {
-                hit.rigidbody.AddForce(transform.forward * _force);
-                hit.rigidbody.useGravity = true;
-            }
+            if (!hit.transform.CompareTag("Target"))
+                return;
+
+            ApplyHit(hit, randomDamage);
+        }
+    }
+
+    private void ApplyHit(RaycastHit hit, int randomDamage)
+    {
+        Debug.Log(hit.transform.name);
+        TargetHp targetHp = hit.transform.GetComponent<TargetHp>();
+        targetHp.CurrentHp -= randomDamage;
+        Debug.Log($"Current damage is: {randomDamage}");
+        if (hit.collider.CompareTag("Target") && targetHp.CurrentHp <= 0)
+        {
+            hit.rigidbody.AddForce(transform.forward * _force);
+            hit.rigidbody.useGravity = true;
+            
         }
     }
 }

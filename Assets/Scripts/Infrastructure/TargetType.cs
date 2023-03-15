@@ -1,6 +1,6 @@
 ﻿public enum TargetType
 {
-    ManWithABat = 1,
-    ManWithAGun = 2,
-    ManWithAKnife = 3
+    BanditsTrioV01 = 1,
+    BanditsTrioV02 = 2,
+    BanditsTrioV03 = 3
 }

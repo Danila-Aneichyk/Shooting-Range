@@ -176,7 +176,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90699109631795607}
-  - component: {fileID: -5604877204348364362}
   m_Layer: 0
   m_Name: ManWithAGun
   m_TagString: Untagged
@@ -201,24 +200,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5604877204348364362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2710587757386355922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4ffd9cdb8ab3f143ad23eaea76be805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _points: []
-  _needPlayOnStart: 1
-  _isLoop: 1
-  _delayInPosition: 1
-  _duration: 15
-  _ease: 1
 --- !u!1 &3532601637001490386
 GameObject:
   m_ObjectHideFlags: 0
