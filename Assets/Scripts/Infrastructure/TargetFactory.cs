@@ -31,22 +31,13 @@ public class TargetFactory : ITargetFactory
         switch (targetType)
         {
             case TargetType.BanditsTrioV01:
-                if (GameObject.FindGameObjectWithTag("Target") == null)
-                {
-                    _diContainer.InstantiatePrefab( _banditsTrioV01Prefab, targetPosition, Quaternion.identity, null);
-                }
+                _diContainer.InstantiatePrefab(_banditsTrioV01Prefab, targetPosition, Quaternion.identity, null);
                 break;
             case TargetType.BanditsTrioV02:
-                if (GameObject.FindGameObjectWithTag("Target") == null)
-                {
-                    _diContainer.InstantiatePrefab(_banditsTrioV02Prefab, targetPosition, Quaternion.identity, null);
-                }
+                _diContainer.InstantiatePrefab(_banditsTrioV02Prefab, targetPosition, Quaternion.identity, null);
                 break;
             case TargetType.BanditsTrioV03:
-                if (GameObject.FindGameObjectWithTag("Target") == null)
-                {
-                    _diContainer.InstantiatePrefab(_banditsTrioV03Prefab, targetPosition, Quaternion.identity, null);   
-                }
+                _diContainer.InstantiatePrefab(_banditsTrioV03Prefab, targetPosition, Quaternion.identity, null);
                 break;
         }
     }

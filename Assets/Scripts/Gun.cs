@@ -40,6 +40,7 @@ public class Gun : MonoBehaviour
                 return;
 
             ApplyHit(hit, randomDamage);
+            
         }
     }
 
@@ -53,7 +54,7 @@ public class Gun : MonoBehaviour
         {
             hit.rigidbody.AddForce(transform.forward * _force);
             hit.rigidbody.useGravity = true;
-            
+            Destroy(hit.transform.gameObject); 
         }
     }
 }

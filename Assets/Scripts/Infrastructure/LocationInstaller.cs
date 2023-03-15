@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Zenject;
 
 public class LocationInstaller : MonoInstaller, IInitializable
@@ -20,6 +21,11 @@ public class LocationInstaller : MonoInstaller, IInitializable
         BindPoints();
         BindHero();
         BindTargetFactory();
+    }
+
+    private void Update()
+    {
+        Initialize();
     }
 
     private void BindTargetFactory()
@@ -63,10 +69,12 @@ public class LocationInstaller : MonoInstaller, IInitializable
         ITargetFactory targetFactory = Container.Resolve<ITargetFactory>();
 
         targetFactory.Load();
-
-        foreach (TargetMarker targetMarker in TargetMarkers)
+        if (GameObject.FindGameObjectWithTag("Target") == null)
         {
-            targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
+            foreach (TargetMarker targetMarker in TargetMarkers)
+            {
+                targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
+            }
         }
     }
 }
