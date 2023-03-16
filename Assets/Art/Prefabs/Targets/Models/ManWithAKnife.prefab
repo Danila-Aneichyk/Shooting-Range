@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9005467482615029438}
   m_Layer: 0
   m_Name: 'Rack_02 '
-  m_TagString: Untagged
+  m_TagString: Rack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 9146174938914632626}
   m_Layer: 0
   m_Name: ManWithAKnife
-  m_TagString: Untagged
+  m_TagString: Rack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

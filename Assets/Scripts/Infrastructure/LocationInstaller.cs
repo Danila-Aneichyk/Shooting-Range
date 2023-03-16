@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 public class LocationInstaller : MonoInstaller, IInitializable
@@ -11,6 +10,8 @@ public class LocationInstaller : MonoInstaller, IInitializable
     [SerializeField] private Points _points;
     [Header("Target Markers")]
     [SerializeField] private TargetMarker[] TargetMarkers;
+
+    [SerializeField] private TrashDestroy _trashDestroy; 
 
     public override void InstallBindings()
     {
@@ -69,12 +70,12 @@ public class LocationInstaller : MonoInstaller, IInitializable
         ITargetFactory targetFactory = Container.Resolve<ITargetFactory>();
 
         targetFactory.Load();
-        if (GameObject.FindGameObjectWithTag("Target") == null)
+
+
+        foreach (TargetMarker targetMarker in TargetMarkers)
         {
-            foreach (TargetMarker targetMarker in TargetMarkers)
-            {
-                targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
-            }
+            _trashDestroy.DestroyRacks();
+            targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
         }
     }
 }
