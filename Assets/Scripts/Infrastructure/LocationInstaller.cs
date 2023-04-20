@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-public class LocationInstaller : MonoInstaller, IInitializable
+public class LocationInstaller : MonoInstaller
 {
     [Header("Hero Values")]
     [SerializeField] private Transform _startPoint;
@@ -11,7 +11,7 @@ public class LocationInstaller : MonoInstaller, IInitializable
     [Header("Target Markers")]
     [SerializeField] private TargetMarker[] TargetMarkers;
 
-    [SerializeField] private TrashDestroy _trashDestroy; 
+    [SerializeField] private TrashDestroy _trashDestroy;
 
     public override void InstallBindings()
     {
@@ -22,11 +22,6 @@ public class LocationInstaller : MonoInstaller, IInitializable
         BindPoints();
         BindHero();
         BindTargetFactory();
-    }
-
-    private void Update()
-    {
-        Initialize();
     }
 
     private void BindTargetFactory()
@@ -63,19 +58,5 @@ public class LocationInstaller : MonoInstaller, IInitializable
             .Bind<PlayerMovement>()
             .FromInstance(playerMovement)
             .AsSingle();
-    }
-
-    public void Initialize()
-    {
-        ITargetFactory targetFactory = Container.Resolve<ITargetFactory>();
-
-        targetFactory.Load();
-
-
-        foreach (TargetMarker targetMarker in TargetMarkers)
-        {
-            _trashDestroy.DestroyRacks();
-            targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
-        }
     }
 }

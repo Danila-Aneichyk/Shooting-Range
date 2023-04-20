@@ -3,5 +3,7 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-    [SerializeField] public List<Transform> _points;
+    [SerializeField] private List<Transform> _points;
+
+    public List<Transform> PointsList => _points;
 }

@@ -20,11 +20,11 @@ public class MovingObject : MonoBehaviour
     private Tween _tween;
 
     public List<Transform> Points => _points;
-
+    
     [Inject]
-    private void Construct(Points points)
+    public void Construct(Points points)
     {
-        _points = points._points;
+        _points = points.PointsList;
     }
     
     private void Awake()

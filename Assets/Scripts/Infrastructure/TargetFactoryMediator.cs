@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Zenject;
 
 public class TargetFactoryMediator : MonoBehaviour
 {
@@ -6,9 +8,14 @@ public class TargetFactoryMediator : MonoBehaviour
     private ITargetFactory _targetFactory;
     [SerializeField] private TargetMarker[] TargetMarkers;
 
+    [Inject]
+    private void Construct(ITargetFactory targetFactory)
+    {
+        _targetFactory = targetFactory; 
+    }
+
     public void Start()
     {
-        _targetFactory = GetComponent<ITargetFactory>();
         _targetFactory.Load();
     }
 
@@ -19,13 +26,9 @@ public class TargetFactoryMediator : MonoBehaviour
 
     private void TargetCreating()
     {
-        _targetFactory = GetComponent<ITargetFactory>();
-
-        _targetFactory.Load();
-
         foreach (TargetMarker targetMarker in TargetMarkers)
         {
-            _targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
+                _targetFactory.Create(targetMarker.TargetType, targetMarker.transform.position);
         }
     }
 }
