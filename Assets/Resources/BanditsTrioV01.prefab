@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1290963002090767843}
   - component: {fileID: 8725790525871364332}
   m_Layer: 0
-  m_Name: BanditsTrioV1
+  m_Name: BanditsTrioV01
   m_TagString: Trio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
